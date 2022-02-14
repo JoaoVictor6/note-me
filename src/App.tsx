@@ -1,28 +1,35 @@
 import {
-  Link,
-  MakeGenerics,
+  DefaultGenerics,
   Outlet,
   ReactLocation,
+  Route,
   Router,
-  useMatch,
 } from "react-location";
+import { useTheme } from "./context/Theme.context";
 import Auth from "./pages/Auth";
+import Note from "./pages/Note";
 
-const routes = [
+const routes: Route<DefaultGenerics>[] = [
   {
     path: "/", element: <Auth />
+  },
+  {
+    path: "/note", element: <Note />
   }
 ]
 
 const location = new ReactLocation();
 
 function App() {
+  const theme = useTheme()
   return (
     <Router
       location={location}
       routes={routes}
     >
-      <Outlet />
+      <div className={theme}>
+        <Outlet />
+      </div>
     </Router>
   )
 }

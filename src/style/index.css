@@ -8,7 +8,6 @@
   --primary-color-cream-white: #FFFDFA;
   --gray-color-900: #000;
   --gray-color-800: #343539;
-  --gray-color-600: #4D4D4D;
   --gray-color-400: #808080;
   --gray-color-300: #8C8A97;
 }
@@ -20,11 +19,13 @@
   --color-lateral: var(--primary-color-white);
   --color-lateral-button: var(--primary-color-midnight);
   --color-bg: var(--primary-color-white);
+  --color-greeting-title: var(--gray-color-900);
+  --color-greeting-subtitle: var(--gray-color-300);
+  --color-switch-button: var(--gray-color-400);
 
-  --home-title: var(--gray-color-900);
-  --home-subtitle: var(--gray-color-400);
-  --home-divider: var(--gray-color-300);
-  --home-input: var(--gray-color-300);
+  --color-card-text: var(--primary-color-midnight);
+  --color-card-placeholder: var(--gray-color-400);
+  --color-search: var(--gray-color-400);
 }
 
 .dark {

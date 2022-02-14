@@ -1,0 +1,120 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-content: center;
+  align-items: center;
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.header__text {
+  margin-left: 112px;
+  h1 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 42px;
+    color: var(--color-gray-900);
+    margin-bottom: 21px;
+  }
+
+  h2 {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+    color: var(--gray-color-400);
+    width: 456px;
+  }
+}
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  & > img {
+    margin-bottom: 85px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    alig-items: center;
+    width: 320px;
+  }
+}
+.form__divider{
+  color: var(--gray-color-300);
+  margin: 46px 0 35px 0;
+
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    flex: 1;
+    height: 1px;
+    opacity: .7;
+    background: var(--gray-color-300);
+    margin-right: 25px;
+
+  }
+  &::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    opacity: .7;
+    background: var(--gray-color-300);
+    margin-left: 25px;
+  }
+}
+.form__googleAuth {
+  background: var(--semantic-red);
+
+  color: var(--primary-color-white-details);
+  font-weight: 700;
+  font-size: 16px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  border-radius: 8px;
+  padding: 12px;
+}
+.form__input {
+  padding: 16px;
+  font-size: 16px;
+
+  border: 1px solid var(--gray-color-300);
+  border-radius: 8px;
+  color: var(--gray-color-900);
+
+  &::placeholder {
+    color: var(--gray-color-300);
+  }
+}
+.form__joinButton {
+  background: var(--semantic-green);
+  color: var(--primary-color-white-details);
+  padding: 17px;
+  font-size: 14px;
+  border-radius: 8px;
+
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 29px;
+
+  &[disabled] {
+    filter: brightness(0.8);
+  }
+}

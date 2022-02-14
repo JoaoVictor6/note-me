@@ -1,0 +1,42 @@
+:root {
+  --semantic-red: #F7685C;
+  --semantic-green: #30C58D;
+  --primary-color-rose: #FDBAA3;
+  --primary-color-white: #FFF;
+  --primary-color-midnight: #3C3D43;
+  --primary-color-cream-white: #FFFDFA;
+  --gray-color-900: #000;
+  --gray-color-800: #343539;
+  --gray-color-600: #4D4D4D;
+  --gray-color-400: #808080;
+  --gray-color-300: #8C8A97;
+}
+.hybrid {
+
+}
+
+.light {
+  --color-lateral: var(--primary-color-white);
+  --color-lateral-button: var(--primary-color-midnight);
+  --color-bg: var(--primary-color-white);
+
+  --home-title: var(--gray-color-900);
+  --home-subtitle: var(--gray-color-400);
+  --home-divider: var(--gray-color-300);
+  --home-input: var(--gray-color-300);
+}
+
+.dark {
+  --bg-color: #111;
+  --text-color: #fff;
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}

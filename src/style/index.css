@@ -3,6 +3,7 @@
   --semantic-green: #30C58D;
   --primary-color-rose: #FDBAA3;
   --primary-color-white: #FFF;
+  --primary-color-white-details: #FEFEFE;
   --primary-color-midnight: #3C3D43;
   --primary-color-cream-white: #FFFDFA;
   --gray-color-900: #000;
@@ -39,4 +40,21 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+input {
+  border: 0;
+  background: 0;
+  outline: 0;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+
+  transition: all .34s;
+  &[disabled] {
+    cursor: not-allowed;
+  }
 }

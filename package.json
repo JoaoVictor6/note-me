@@ -1,0 +1,29 @@
+{
+  "name": "note-me",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "test": "jest"
+  },
+  "dependencies": {
+    "firebase": "^9.6.6",
+    "postcss": "^8.4.6",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.17",
+    "@types/react": "^17.0.33",
+    "@types/react-dom": "^17.0.10",
+    "@vitejs/plugin-react": "^1.0.7",
+    "autoprefixer": "^10.4.2",
+    "postcss-cli": "^9.1.0",
+    "postcss-modules": "^4.3.0",
+    "postcss-nested": "^5.0.6",
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0"
+  }
+}

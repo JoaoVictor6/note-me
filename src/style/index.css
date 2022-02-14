@@ -53,7 +53,8 @@ button {
   border: 0;
   outline: 0;
   cursor: pointer;
-
+  background: none;
+  
   transition: all .34s;
   &[disabled] {
     cursor: not-allowed;

@@ -1,0 +1,5 @@
+.themeSwitchBtn {
+  svg > path {
+    stroke: var(--color-switch-button);
+  }
+}

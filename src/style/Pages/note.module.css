@@ -29,6 +29,11 @@
   width: 1032px;
   height: 100vh;
   margin: 0 auto;
+  padding: 38px 0;
+
+  nav {
+    margin-bottom: 52px;
+  }
 }
 
 .main__header {

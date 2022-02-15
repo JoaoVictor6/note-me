@@ -4,7 +4,9 @@ import { SidebarLogo } from '@components/SidebarLogo'
 import { useNavigate } from 'react-location'
 import { Menu } from '@components/Menu'
 import { Nav } from '@components/Nav'
-import classes from '@style/Pages/note.module.css'
+import { Notes } from '@components/Notes'
+import classes from '@style/Pages/note.module.css' 
+import { ThemeSwitch } from '@components/ThemeSwitch'
 
 export default function Note() {
   const navigate = useNavigate()
@@ -34,11 +36,14 @@ export default function Note() {
         </button>
       </aside>
       <main className={classes.main}>
-        <Nav />
+        <Nav 
+          gadgets={<ThemeSwitch />}
+        />
         <header className={classes.main__header}>
           <h1>Hello, <p>{userName}</p>! 👋🏼</h1>
           <h2>All your notes are here, in one place!</h2>
         </header>
+        <Notes />
       </main>
     </div>
   )

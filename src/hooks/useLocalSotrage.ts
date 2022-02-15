@@ -18,7 +18,10 @@ export function useLocalStorage<T = string>(key: string): UseLocalStorageReturn<
   })
 
   useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(value))
+    if(typeof value === 'object'){
+      localStorage.setItem(key, JSON.stringify(value))
+    }
+    localStorage.setItem(key, String(value))
   }, [value])
 
   const sanitizeSetValue = (value: T) => {

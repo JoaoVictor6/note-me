@@ -4,19 +4,19 @@ import manWorkingSVG from '@assets/home/man-working.svg'
 import googleSVG from '@assets/logo/google.svg'
 import logoSVG from '@assets/brand/logo-light.svg'
 import { signInWithGoogle } from '../services/firebase/authProvide'
-import { useLocalStorage } from '../hooks/useLocalSotrage'
+import { useLocalStorage } from '../hooks/useLocalStorage'
 import { useNavigate } from 'react-location'
 
 export default function Auth() {
   const navigate = useNavigate()
   const [codeName, setCodeName] = useState("")
   const [_, setUserName] = useLocalStorage<string>('@note-me/name')
-  const googleButtonHandler = () => {
-    signInWithGoogle().then(user => {
-      if(!user)return
+  const googleButtonHandler = async () => {
+    const user = await signInWithGoogle()
+    if(!user)return
 
-      setUserName(user)
-    })
+    setUserName(user)
+    navigate({to: '/note', replace: true})
   }
   const codeNameButtonHandler = () => {
     setUserName(codeName)
@@ -40,7 +40,8 @@ export default function Auth() {
         <form
           onSubmit={submitHandler}
         >
-          <button 
+          <button
+            type="button"
             className={classes.form__googleAuth}
             onClick={googleButtonHandler}
           >

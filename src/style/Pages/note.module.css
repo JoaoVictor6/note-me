@@ -24,3 +24,30 @@
     opacity: 1;
   }
 }
+
+.main {
+  width: 1032px;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.main__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  h1 {
+    color: var(--color-greeting-title);
+    font-weight: 400;
+    display: flex;
+    font-size: 32px;
+    p {
+      font-weight: 700;
+    }
+  }
+
+  h2 {
+    color: var(--color-greeting-subtitle);
+    font-weight: 400;
+    font-size: 20px;
+  }
+}

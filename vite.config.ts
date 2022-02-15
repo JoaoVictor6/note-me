@@ -12,7 +12,9 @@ export default defineConfig({
     alias: {
       "@style": path.resolve(__dirname, "./src/style/"),
       "@assets": path.resolve(__dirname, "./src/assets/"),
-      "@services": path.join(__dirname, "./src/services/")
+      "@services": path.join(__dirname, "./src/services/"),
+      "@components": path.join(__dirname, "./src/components/"),
+      "@hooks": path.join(__dirname, "./src/hooks/")
     }
   },
   css: {

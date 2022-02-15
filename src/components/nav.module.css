@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-item: center;
+
+  form{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    svg > path {
+      stroke: var(--color-search);
+    }
+    input {
+      color: var(--color-search);
+      font-size: 18px;
+    }
+  }
+}

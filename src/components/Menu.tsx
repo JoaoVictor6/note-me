@@ -1,7 +1,7 @@
 import React from 'react'
 import classes from './menu.module.css'
 
-export default function Menu() {
+export function Menu() {
   return (
     <menu className={classes.menu}>
       <button className={classes.menu__homeBtn}>

@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react'
 import { useLocalStorage } from '@hooks/useLocalStorage'
-import SidebarLogo from '@components/SidebarLogo'
-import classes from '@style/Pages/note.module.css'
+import { SidebarLogo } from '@components/SidebarLogo'
 import { useNavigate } from 'react-location'
-import Menu from '@components/Menu'
-import Nav from '@components/Nav'
+import { Menu } from '@components/Menu'
+import { Nav } from '@components/Nav'
+import classes from '@style/Pages/note.module.css'
 
 export default function Note() {
   const navigate = useNavigate()

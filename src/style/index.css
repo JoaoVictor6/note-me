@@ -16,16 +16,19 @@
 }
 
 .light {
+  --color-bg: var(--primary-color-white);
+  
   --color-lateral: var(--primary-color-white);
   --color-lateral-button: var(--primary-color-midnight);
-  --color-bg: var(--primary-color-white);
+  
   --color-greeting-title: var(--gray-color-900);
   --color-greeting-subtitle: var(--gray-color-300);
+
   --color-switch-button: var(--gray-color-400);
+  --color-search: var(--gray-color-400);
 
   --color-card-text: var(--primary-color-midnight);
   --color-card-placeholder: var(--gray-color-400);
-  --color-search: var(--gray-color-400);
 }
 
 .dark {

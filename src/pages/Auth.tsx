@@ -4,11 +4,26 @@ import manWorkingSVG from '@assets/home/man-working.svg'
 import googleSVG from '@assets/logo/google.svg'
 import logoSVG from '@assets/brand/logo-light.svg'
 import { signInWithGoogle } from '../services/firebase/authProvide'
+import { useLocalStorage } from '../hooks/useLocalSotrage'
+import { useNavigate } from 'react-location'
 
 export default function Auth() {
+  const navigate = useNavigate()
   const [codeName, setCodeName] = useState("")
-  const googleButtonHandler = (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    signInWithGoogle()
+  const [_, setUserName] = useLocalStorage<string>('@note-me/name')
+  const googleButtonHandler = () => {
+    signInWithGoogle().then(user => {
+      if(!user)return
+
+      setUserName(user)
+    })
+  }
+  const codeNameButtonHandler = () => {
+    setUserName(codeName)
+  }
+  const submitHandler = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    navigate({to: '/note', replace: true})
   }
 
   return (
@@ -23,7 +38,7 @@ export default function Auth() {
       <section className={classes.formSection}>
         <img src={logoSVG} alt="logo of note.me" />
         <form
-          onSubmit={e => e.preventDefault()}
+          onSubmit={submitHandler}
         >
           <button 
             className={classes.form__googleAuth}
@@ -41,6 +56,7 @@ export default function Auth() {
             onChange={e => setCodeName(e.target.value)}
           />
           <button
+            onClick={codeNameButtonHandler}
             disabled={codeName === ""}
             className={classes.form__joinButton}
           >

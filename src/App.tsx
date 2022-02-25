@@ -1,12 +1,36 @@
-import style from './App.module.css'
-import { useTheme } from './context/Theme.context'
+import {
+  DefaultGenerics,
+  Outlet,
+  ReactLocation,
+  Route,
+  Router,
+} from "react-location";
+import { useTheme } from "./context/Theme.context";
+import Auth from "./pages/Auth";
+import Note from "./pages/Note";
+
+const routes: Route<DefaultGenerics>[] = [
+  {
+    path: "/", element: <Auth />
+  },
+  {
+    path: "/note", element: <Note />
+  }
+]
+
+const location = new ReactLocation();
 
 function App() {
-  const theme = useTheme()
+  const { theme } = useTheme()
   return (
-    <div className={theme}>
-      <h1 className={style.h1}>TESTE</h1>
-    </div>
+    <Router
+      location={location}
+      routes={routes}
+    >
+      <div className={theme}>
+        <Outlet />
+      </div>
+    </Router>
   )
 }
 

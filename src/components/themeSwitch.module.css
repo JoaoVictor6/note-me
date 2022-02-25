@@ -1,0 +1,11 @@
+.themeSwitchBtn {
+  transition: all .35s;
+  &:hover, &:active {
+    svg > path {
+      stroke: var(--color-switch-button-hover);
+    }
+  }
+  svg > path {
+    stroke: var(--color-switch-button);
+  }
+}

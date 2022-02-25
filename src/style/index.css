@@ -1,0 +1,92 @@
+:root {
+  --semantic-red: #F7685C;
+  --semantic-green: #30C58D;
+  --primary-color-rose: #FDBAA3;
+  --primary-color-white: #FFF;
+  --primary-color-white-details: #FEFEFE;
+  --primary-color-midnight: #3C3D43;
+  --primary-color-cream-white: #FFFDFA;
+  --gray-color-900: #000;
+  --gray-color-800: #343539;
+  --gray-color-400: #808080;
+  --gray-color-300: #8C8A97;
+}
+.hybrid {
+  --color-bg: var(--primary-color-white);
+  
+  --color-lateral: var(--primary-color-midnight);
+  --color-lateral-button: var(--primary-color-white);
+  
+  --color-greeting-title: var(--gray-color-900);
+  --color-greeting-subtitle: var(--gray-color-300);
+
+  --color-switch-button: var(--gray-color-400);
+  --color-switch-button-hover: var(--gray-color-800);
+  --color-search: var(--gray-color-400);
+
+  --color-card-text: var(--primary-color-midnight);
+  --color-card-placeholder: var(--gray-color-400);
+}
+
+.light {
+  --color-bg: var(--primary-color-white);
+  
+  --color-lateral: var(--primary-color-white);
+  --color-lateral-button: var(--primary-color-midnight);
+  
+  --color-greeting-title: var(--gray-color-900);
+  --color-greeting-subtitle: var(--gray-color-300);
+
+  --color-switch-button: var(--gray-color-400);
+  --color-switch-button-hover: var(--gray-color-800);
+  --color-search: var(--gray-color-400);
+
+  --color-card-text: var(--primary-color-midnight);
+  --color-card-placeholder: var(--gray-color-400);
+}
+
+.dark {
+  --color-bg: var(--gray-color-800);
+  
+  --color-lateral: var(--primary-color-midnight);
+  --color-lateral-button: var(--primary-color-white);
+  
+  --color-greeting-title: var(--primary-color-white);
+  --color-greeting-subtitle: var(--gray-color-300);
+
+  --color-switch-button: var(--gray-color-300);
+  --color-switch-button-hover: var(--primary-color-cream-white);
+  --color-search: var(--gray-color-300);
+
+  --color-card-text: var(--primary-color-white);
+  --color-card-placeholder: var(--primary-color-white);
+}
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all .05s;
+}
+
+input {
+  border: 0;
+  background: 0;
+  outline: 0;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  background: none;
+  
+  transition: all .34s;
+  &[disabled] {
+    cursor: not-allowed;
+  }
+}

@@ -1,0 +1,61 @@
+.container {
+  background: var(--color-bg);
+  height: 100vh;
+}
+
+.aside {
+  position: fixed;
+  height: 100vh;
+  padding: 30px 0;
+  
+  filter: drop-shadow(0px 0px 60px rgba(0, 0, 0, 0.05));
+
+  background: var(--color-lateral);
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.side__logout {
+  svg > g > path {
+    stroke: var(--color-lateral-button);
+  }
+  opacity: 0.5;
+
+  &:hover, &:active {
+    opacity: 1;
+  }
+}
+
+.main {
+  width: 1032px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 38px 0;
+
+  nav {
+    margin-bottom: 52px;
+  }
+}
+
+.main__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  h1 {
+    color: var(--color-greeting-title);
+    font-weight: 400;
+    display: flex;
+    font-size: 32px;
+    p {
+      font-weight: 700;
+    }
+  }
+
+  h2 {
+    color: var(--color-greeting-subtitle);
+    font-weight: 400;
+    font-size: 20px;
+  }
+}

@@ -23,6 +23,7 @@ export default function Note() {
         <button
           onClick={() => {
             setUserName('')
+            localStorage.removeItem('@note-me/theme')
           }}
           className={classes.side__logout}
         >

@@ -5,10 +5,10 @@ type UseLocalStorageReturn<T> = [
   React.Dispatch<React.SetStateAction<T>>
 ]
 
-export function useLocalStorage<T = string>(key: string): UseLocalStorageReturn<T>{
+export function useLocalStorage<T = string>(key: string, initValue?:T ): UseLocalStorageReturn<T>{
   const [value, setValue] = useState<T>(() => {
     const value = localStorage.getItem(key)
-    if(!value) return ''
+    if(!value) return initValue
     if(typeof value === 'object'){
       const parsedValue = JSON.parse(value)
   
@@ -24,9 +24,9 @@ export function useLocalStorage<T = string>(key: string): UseLocalStorageReturn<
     localStorage.setItem(key, String(value))
   }, [value])
 
-  const sanitizeSetValue = (value: T) => {
-    setValue(value)
-  }
+  // const sanitizeSetValue = (value: T) => {
+  //   setValue(value)
+  // }
 
   return [value, setValue]
 }

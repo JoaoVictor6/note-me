@@ -14,7 +14,8 @@ export default defineConfig({
       "@assets": path.resolve(__dirname, "./src/assets/"),
       "@services": path.join(__dirname, "./src/services/"),
       "@components": path.join(__dirname, "./src/components/"),
-      "@hooks": path.join(__dirname, "./src/hooks/")
+      "@hooks": path.join(__dirname, "./src/hooks/"),
+      "@context": path.join(__dirname, "./src/context/")
     }
   },
   css: {

@@ -1,21 +1,40 @@
-import { ReactNode, createContext, useContext } from "react"
+import { ReactNode, createContext, useContext, useState } from "react"
 
 type Props = {
   children: ReactNode
 }
-
-const Theme = createContext<'dark' | 'light'>('light')
+type Themes = 'dark' | 'light' | 'hybrid'
+type ThemeProps = {
+  currentTheme: Themes
+  setCurrentTheme: React.Dispatch<React.SetStateAction<Themes>>
+}
+const Theme = createContext({} as ThemeProps)
 
 export const ThemeProvider = ({children}: Props) => {
+  const [currentTheme, setCurrentTheme] = useState<Themes>('light')
+
   return (
-    <Theme.Provider value="light">
+    <Theme.Provider value={{currentTheme, setCurrentTheme}}>
       {children}
     </Theme.Provider> 
   )
 }
 
 export const useTheme = () => {
-  const theme = useContext(Theme)
-
-  return theme
+  const {currentTheme, setCurrentTheme} = useContext(Theme)
+  function changeTheme(){
+    if(currentTheme === 'dark'){
+      setCurrentTheme('hybrid')
+      return 
+    }
+    if(currentTheme === 'hybrid'){
+      setCurrentTheme('light')
+      return
+    }
+    if(currentTheme === 'light'){
+      setCurrentTheme('dark')
+      return
+    }
+  }
+  return { theme: currentTheme, changeTheme }
 }

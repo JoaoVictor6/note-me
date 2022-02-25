@@ -21,7 +21,7 @@ const routes: Route<DefaultGenerics>[] = [
 const location = new ReactLocation();
 
 function App() {
-  const theme = useTheme()
+  const { theme } = useTheme()
   return (
     <Router
       location={location}

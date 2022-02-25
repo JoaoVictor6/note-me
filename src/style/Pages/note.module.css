@@ -18,6 +18,9 @@
 }
 
 .side__logout {
+  svg > g > path {
+    stroke: var(--color-lateral-button);
+  }
   opacity: 0.5;
 
   &:hover, &:active {

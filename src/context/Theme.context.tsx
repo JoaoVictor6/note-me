@@ -1,3 +1,4 @@
+import { useLocalStorage } from "@hooks/useLocalStorage"
 import { ReactNode, createContext, useContext, useState } from "react"
 
 type Props = {
@@ -11,7 +12,7 @@ type ThemeProps = {
 const Theme = createContext({} as ThemeProps)
 
 export const ThemeProvider = ({children}: Props) => {
-  const [currentTheme, setCurrentTheme] = useState<Themes>('light')
+  const [currentTheme, setCurrentTheme] = useLocalStorage<Themes>('@note-me/theme', 'light')
 
   return (
     <Theme.Provider value={{currentTheme, setCurrentTheme}}>
@@ -21,7 +22,7 @@ export const ThemeProvider = ({children}: Props) => {
 }
 
 export const useTheme = () => {
-  const {currentTheme, setCurrentTheme} = useContext(Theme)
+  const {currentTheme, setCurrentTheme} = useContext(Theme) 
   function changeTheme(){
     if(currentTheme === 'dark'){
       setCurrentTheme('hybrid')

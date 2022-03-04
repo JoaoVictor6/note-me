@@ -1,14 +1,11 @@
 import { useLocalStorage } from "@hooks/useLocalStorage"
-import { ReactNode, createContext, useContext, useState } from "react"
+import { ThemeProps, Themes } from "@userTypes/contextTypes"
+import { ReactNode, createContext, useContext } from "react"
 
 type Props = {
   children: ReactNode
 }
-type Themes = 'dark' | 'light' | 'hybrid'
-type ThemeProps = {
-  currentTheme: Themes
-  setCurrentTheme: (value: Themes) => void
-}
+
 const Theme = createContext({} as ThemeProps)
 
 export const ThemeProvider = ({children}: Props) => {

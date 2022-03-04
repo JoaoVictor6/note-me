@@ -1,46 +1,11 @@
 import { useLocalStorage } from "@hooks/useLocalStorage"
+import { ColorClass, ContextProps, NotesProps } from "@userTypes/contextTypes"
+import { randomColor } from "@utils/randomPosition"
 import { ReactNode, createContext, useContext, useState } from "react"
+import { colors, initialProps } from "./staticData"
 
 type Props = {
   children: ReactNode
-}
-type ContextProps = {
-  notes: NotesProps[]
-  removeNote: (id: number) => void
-  editNote: (id: number, text: string) => void
-  addNote: () => void
-}
-type ColorClass = 'opaqueLightYellow'| 'opaqueRedOrange' | 'opaqueLilac' | 'opaqueGreenCyan' | 'opaqueLightCyan'
-type NotesProps = {
-  timestamp: string
-  text: string
-  colorClass: ColorClass
-}
-
-const colors: ColorClass[] = ['opaqueLightYellow', 'opaqueRedOrange' , 'opaqueLilac' , 'opaqueGreenCyan' , 'opaqueLightCyan']
-
-const initialProps:NotesProps[] = [
-  {
-    text: 'This is how a Note on Note.me looks like! Very simple, clean and asthetic! 😍',
-    timestamp: (new Date()).toISOString(),
-    colorClass: 'opaqueLightYellow'
-  },
-  {
-    text: 'This is how a Note on Note.me looks like! Very simple, clean and asthetic! 😍',
-    timestamp: (new Date()).toISOString(),
-    colorClass: 'opaqueGreenCyan'
-  },
-  {
-    text: 'Type your note...',
-    timestamp: (new Date()).toISOString(),
-    colorClass: 'opaqueLilac'
-  }
-]
-
-const randomColor = (list: string[]) => {
-  const index = Math.floor(Math.random() * list.length)
-
-  return list[index] 
 }
 
 const NotesContext = createContext({} as ContextProps) 

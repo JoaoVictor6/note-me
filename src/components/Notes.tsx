@@ -49,7 +49,6 @@ export function Notes() {
         <section 
           onDrop={e => {
             const data = e.dataTransfer.getData("text");
-            console.log(Number(data))
             setDragging(false)
             removeNote(Number(data))
           }}

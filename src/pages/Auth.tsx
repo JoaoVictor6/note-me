@@ -10,7 +10,7 @@ import { useNavigate } from 'react-location'
 export default function Auth() {
   const navigate = useNavigate()
   const [codeName, setCodeName] = useState("")
-  const [_, setUserName] = useLocalStorage<string>('@note-me/name')
+  const [_, setUserName] = useLocalStorage('@note-me/name')
   const googleButtonHandler = async () => {
     const user = await signInWithGoogle()
     if(!user)return

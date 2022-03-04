@@ -1,3 +1,4 @@
+import { NotesProvider } from "@context/Notes.context";
 import {
   DefaultGenerics,
   Outlet,
@@ -14,7 +15,11 @@ const routes: Route<DefaultGenerics>[] = [
     path: "/", element: <Auth />
   },
   {
-    path: "/note", element: <Note />
+    path: "/note", element: (
+      <NotesProvider>
+        <Note />
+      </NotesProvider>
+    )
   }
 ]
 

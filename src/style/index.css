@@ -90,3 +90,10 @@ button {
     cursor: not-allowed;
   }
 }
+
+.dragStyle {
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  * {
+    opacity: 0;
+  }
+}

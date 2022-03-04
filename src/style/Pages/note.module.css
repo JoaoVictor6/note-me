@@ -1,6 +1,6 @@
 .container {
   background: var(--color-bg);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .aside {
@@ -30,7 +30,7 @@
 
 .main {
   width: 1032px;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   padding: 38px 0;
 

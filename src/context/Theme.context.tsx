@@ -7,7 +7,7 @@ type Props = {
 type Themes = 'dark' | 'light' | 'hybrid'
 type ThemeProps = {
   currentTheme: Themes
-  setCurrentTheme: React.Dispatch<React.SetStateAction<Themes>>
+  setCurrentTheme: (value: Themes) => void
 }
 const Theme = createContext({} as ThemeProps)
 

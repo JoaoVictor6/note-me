@@ -1,0 +1,89 @@
+.opaqueLightYellow {
+  background: rgba(251, 235, 149, 0.4);
+}
+.opaqueRedOrange {
+  background: rgba(253, 186, 163, 0.4);
+}
+.opaqueLilac {
+  background: rgba(182, 165, 203, 0.4);
+}
+.opaqueGreenCyan {
+  background: rgba(151, 210, 188, 0.6);
+}
+.opaqueLightCyan{
+  background: rgba(174, 223, 232, 0.6);
+}
+
+.notesContainer {
+  margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 36px;
+  
+  & > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    padding: 24px;
+    width: 264px;
+    height: 240px;
+
+    color: var(--color-card-text);
+  }
+}
+
+.cardBody {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 500;
+  background: none;
+  with: 100%;
+  border: none;
+  outline: 0;
+  height: 100%;
+  resize: none;
+  color: inherit;
+  font-style: none;
+  font-family: inherit;
+}
+
+.cardFooter{
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.trashSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  z-index: 1;
+  position: absolute;
+  width: 1032px;
+  bottom: 32px;
+
+  color: var(--semantic-red);
+  svg > path {
+    stroke: var(--semantic-red);
+  }
+
+  transition: 0.25s all;
+  &:hover, &:active {
+    * {
+      filter: brightness(.9);
+      cursor: pointer;
+    }
+  }
+
+  animation: appear .2s ease-in-out;
+}
+
+@keyframes appear{
+  0%{
+    opacity: 0;
+  }
+  100%{
+  }
+}

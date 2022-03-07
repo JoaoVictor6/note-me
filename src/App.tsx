@@ -6,7 +6,7 @@ import {
   Route,
   Router,
 } from "react-location";
-import { useTheme } from "./context/Theme.context";
+import { useTheme } from "@context/Theme.context";
 import Auth from "./pages/Auth";
 import Note from "./pages/Note";
 

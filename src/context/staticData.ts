@@ -1,4 +1,4 @@
-import { ColorClass, NotesProps } from "@userTypes/contextTypes"
+import { ColorClass, NotesProps } from "@interfaces/context/notes"
 
 export const colors: ColorClass[] = ['opaqueLightYellow', 'opaqueRedOrange' , 'opaqueLilac' , 'opaqueGreenCyan' , 'opaqueLightCyan']
 

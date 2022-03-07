@@ -1,5 +1,5 @@
 import { useLocalStorage } from "@hooks/useLocalStorage"
-import { ThemeProps, Themes } from "@userTypes/contextTypes"
+import { ThemeProps, Themes } from "@interfaces/context/theme"
 import { ReactNode, createContext, useContext } from "react"
 
 type Props = {

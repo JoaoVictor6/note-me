@@ -17,7 +17,7 @@ export default defineConfig({
       "@hooks": path.join(__dirname, "./src/hooks/"),
       "@context": path.join(__dirname, "./src/context/"),
       "@utils": path.join(__dirname, "./src/utils/"),
-      "@userTypes": path.join(__dirname, "./src/types/")
+      "@interfaces": path.join(__dirname, "./src/interfaces/")
     }
   },
   css: {

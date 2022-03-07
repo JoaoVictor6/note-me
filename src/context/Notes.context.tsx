@@ -1,5 +1,5 @@
 import { useLocalStorage } from "@hooks/useLocalStorage"
-import { ColorClass, ContextProps, NotesProps } from "@userTypes/contextTypes"
+import { ColorClass, ContextProps, NotesProps } from "@interfaces/context/notes"
 import { randomColor } from "@utils/randomPosition"
 import { ReactNode, createContext, useContext, useState } from "react"
 import { colors, initialProps } from "./staticData"
